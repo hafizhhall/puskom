@@ -31,9 +31,14 @@
             </ul>
         </div>
         <div class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-                <button type="button" class="btn btn-success">Login</button>
-            </ul>
+            @auth
+                <form action="/logout" method="post">
+                    @csrf
+                    <button class="btn btn-danger" type="submit">Logout</button>
+                </form>
+            @else
+                <a class="btn btn-primary" href="/login" role="button">Login</a>
+            @endauth
         </div>
     </div>
 </nav>

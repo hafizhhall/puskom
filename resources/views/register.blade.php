@@ -13,25 +13,53 @@
     <div class="">
         <form class="px-4 py-3" action="/register" method="post">
             @csrf
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="email@example.com">
+            <div class="form-floating">
+                <input type="text" name="name" class="form-control @error('name') is-invalid
+        @enderror"
+                    id="name" placeholder="Nama" required value="{{ old('name') }}">
+                <label for="name">Nama</label>
+                @error('name')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Hafizh Athallah">
+            <div class="form-floating">
+                <input type="email" name="email" class="form-control @error('email') is-invalid
+        @enderror"
+                    id="email" placeholder="name@example.com" required value="{{ old('email') }}">
+                <label for="email">Email address</label>
+                @error('email')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password">
+            <div class="form-floating">
+                <input type="password" name="password"
+                    class="form-control @error('password') is-invalid
+        @enderror" id="password"
+                    placeholder="Password" required>
+                <label for="password">Password</label>
+                @error('password')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
-            <div class="mb-3">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                    <label class="form-check-label" for="dropdownCheck">
-                        Remember me
-                    </label>
-                </div>
+            <div class="form-floating">
+                <input type="password" name="password_confirmation"
+                    class="form-control @error('password_confirmation') is-invalid
+        @enderror" id="password"
+                    placeholder="Password" required>
+                <label for="password_confirmation">Confirm password</label>
+                @error('password_confirmation')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+            <div class="form-check text-start my-2">
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
