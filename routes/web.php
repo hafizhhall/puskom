@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegisterUser;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::middleware('guest')->group(function () {
+    Route::get('/register', [RegisterUser::class, 'index']);
+    Route::post('/register', [RegisterUser::class, 'store']);
 });
