@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="">
+    <div class="col-md-6">
         <form class="px-4 py-3" action="/register" method="post">
             @csrf
             <div class="form-floating">
