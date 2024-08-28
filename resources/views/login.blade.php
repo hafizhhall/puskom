@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <div class="col-md-6">
+    <div class="container py-5 form-signin w-25 m-auto mt-5">
         <form action="/login" method="post">
             <h1 class="h3 mb-3 fw-normal text-center">Silakan Masuk</h1>
             @csrf
-            <div class="form-floating">
+            <div class="form-floating mb-3">
                 <input type="email" name="email"
                     class="form-control @error('email')
             is-invalid

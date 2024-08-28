@@ -10,10 +10,11 @@
 </head>
 
 <body>
-    <div class="col-md-6">
+    <div class="container py-5 form-signin w-25 m-auto mt-5">
         <form class="px-4 py-3" action="/register" method="post">
             @csrf
-            <div class="form-floating">
+            <h1 class="h3 mb-3 fw-normal text-center">Buat Akun</h1>
+            <div class="form-floating mb-3">
                 <input type="text" name="name" class="form-control @error('name') is-invalid
         @enderror"
                     id="name" placeholder="Nama" required value="{{ old('name') }}">
@@ -24,7 +25,7 @@
                     </div>
                 @enderror
             </div>
-            <div class="form-floating">
+            <div class="form-floating mb-3">
                 <input type="email" name="email" class="form-control @error('email') is-invalid
         @enderror"
                     id="email" placeholder="name@example.com" required value="{{ old('email') }}">
@@ -35,7 +36,7 @@
                     </div>
                 @enderror
             </div>
-            <div class="form-floating">
+            <div class="form-floating mb-3">
                 <input type="password" name="password"
                     class="form-control @error('password') is-invalid
         @enderror" id="password"
@@ -47,7 +48,7 @@
                     </div>
                 @enderror
             </div>
-            <div class="form-floating">
+            <div class="form-floating mb-3">
                 <input type="password" name="password_confirmation"
                     class="form-control @error('password_confirmation') is-invalid
         @enderror" id="password"
