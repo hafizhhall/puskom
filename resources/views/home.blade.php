@@ -29,7 +29,7 @@
                                         <img class="card-img-top" src="img/empty.jpg" alt="">
                                         <div
                                             class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                                            {{ $products->product_name }}
+                                            {{ $products->brand->brand_name }}
                                         </div>
                                     </div>
                                     <div class="text-body p-4">

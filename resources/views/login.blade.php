@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="container py-5 form-signin w-25 m-auto mt-5">
+    <div class="py-5 w-25 m-auto mt-5">
         <form action="/login" method="post">
             <h1 class="h3 mb-3 fw-normal text-center">Silakan Masuk</h1>
             @csrf
